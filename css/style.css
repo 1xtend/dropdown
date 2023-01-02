@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*-------------------*/
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  padding: 15px;
+  background-color: rgb(37, 37, 37);
+}
+
+body.mouse .dropdown__list > li:hover .sub-dropdown__list {
+  display: block;
+}
+
+body.touch .arrow {
+  display: block;
+}
+
+.dropdown__list {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 767px) {
+  .dropdown__list {
+    display: block;
+  }
+  .dropdown__list > li {
+    margin-bottom: 10px;
+  }
+}
+.dropdown li {
+  position: relative;
+}
+.dropdown__link {
+  font-size: 18px;
+  color: #fff;
+}
+.dropdown__link.link-margin {
+  margin-right: 30px;
+}
+
+.arrow {
+  display: none;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  top: 3px;
+  right: 0;
+}
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.sub-dropdown__list {
+  display: none;
+  position: absolute;
+  min-width: 120px;
+  padding-top: 10px;
+  top: 15px;
+}
+.sub-dropdown__list > li {
+  background-color: #fff;
+}
+.sub-dropdown__list.open {
+  display: block;
+}
+@media (max-width: 767px) {
+  .sub-dropdown__list {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
+.sub-dropdown__link {
+  color: #000;
+  display: inline-block;
+  padding: 5px 10px;
+}
