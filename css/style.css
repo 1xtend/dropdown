@@ -150,6 +150,9 @@ body.touch .arrow {
 .sub-dropdown__list > li {
   background-color: #fff;
 }
+.sub-dropdown__list > li:hover {
+  background-color: #d8d8d8;
+}
 .sub-dropdown__list.open {
   display: block;
 }

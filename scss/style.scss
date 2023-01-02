@@ -68,6 +68,10 @@ body.touch .arrow {
 
     & > li {
       background-color: #fff;
+
+      &:hover {
+        background-color: #d8d8d8;
+      }
     }
 
     &.open {
